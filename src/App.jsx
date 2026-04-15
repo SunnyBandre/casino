@@ -1,7 +1,29 @@
 import "./App.css";
 import Sticker from "./Sticker";
 
+const offers = [
+  { line1: "100% SIGN-UP", line2: "BONUS" },
+  { line1: "$30 REFERRAL", line2: "BONUS" },
+  { line1: "30% - 70%", line2: "DAILY BONUS" },
+  { line1: "$50 LOYALTY", line2: "BONUS" },
+  { line1: "BIRTHDAY", line2: "TREATS" },
+  { line1: "5 DAYS STREAK", line2: "BONUS" },
+  { line1: "HOLIDAY", line2: "BONUS" },
+  { line1: "INSTANT", line2: "LOAD / REDEEM" },
+  { line1: "WEEKLY", line2: "FREEPLAY" },
+  { line1: "24/7", line2: "SUPPORT" },
+  { line1: "$20 SEASONAL", line2: "BOOSTS" },
+];
+
 function App() {
+  const chunk = (arr, size) => {
+    const res = [];
+    for (let i = 0; i < arr.length; i += size) {
+      res.push(arr.slice(i, i + size));
+    }
+    return res;
+  };
+
   return (
     <div>
       <div className="relative h-screen flex items-center justify-center overflow-hidden">
@@ -110,27 +132,44 @@ function App() {
             OFFERS & PROMOTIONS
           </h1>
 
-          {/* 🔥 ROW 1 */}
-          <div className="flex flex-nowrap justify-center">
-            <Sticker line1="100% SIGN-UP" line2="BONUS" />
-            <Sticker line1="$30 REFERRAL" line2="BONUS" />
-            <Sticker line1="30% - 70%" line2="DAILY BONUS" />
-            <Sticker line1="$50 LOYALTY" line2="BONUS" />
+          {/* 📱 MOBILE (2 per row) */}
+          <div className="flex flex-col gap-0 md:hidden items-center">
+            {chunk(offers, 2).map((row, i) => (
+              <div key={i} className="flex justify-center gap-0">
+                {row.map((item, idx) => (
+                  <Sticker key={idx} {...item} />
+                ))}
+              </div>
+            ))}
           </div>
 
-          {/* 🔥 ROW 2 */}
-          <div className="flex flex-wrap justify-center">
-            <Sticker line1="BIRTHDAY" line2="TREATS" />
-            <Sticker line1="5 DAYS STREAK" line2="BONUS" />
-            <Sticker line1="HOLIDAY" line2="BONUS" />
+          {/* 📲 TABLET (3 per row) */}
+          <div className="hidden md:flex xl:hidden flex-col items-center gap-6">
+            {chunk(offers, 3).map((row, i) => (
+              <div key={i} className="flex justify-center gap-6">
+                {row.map((item, idx) => (
+                  <Sticker key={idx} {...item} />
+                ))}
+              </div>
+            ))}
           </div>
 
-          {/* 🔥 ROW 3 */}
-          <div className="flex flex-nowrap justify-center">
-            <Sticker line1="INSTANT" line2="LOAD / REDEEM" />
-            <Sticker line1="WEEKLY" line2="FREEPLAY" />
-            <Sticker line1="24/7" line2="SUPPORT" />
-            <Sticker line1="$20 SEASONAL" line2="BOOSTS" />
+          {/* 💻 DESKTOP (xl+) CUSTOM 4-3-4 */}
+          <div className="hidden xl:flex flex-col items-center gap-6">
+            {[offers.slice(0, 4), offers.slice(4, 7), offers.slice(7, 11)].map(
+              (row, i) => (
+                <div
+                  key={i}
+                  className={`flex justify-center ${
+                    i === 1 ? "gap-12" : "gap-8"
+                  }`}
+                >
+                  {row.map((item, idx) => (
+                    <Sticker key={idx} {...item} />
+                  ))}
+                </div>
+              ),
+            )}
           </div>
         </div>
       </div>
