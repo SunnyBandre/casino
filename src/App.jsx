@@ -131,9 +131,9 @@ function App() {
         <div className="absolute inset-0 bg-[url('/images/offers.png')] bg-contain bg-center"></div>
 
         {/* 🧠 Content */}
-        <div className="relative z-10 w-full flex flex-col items-center py-2 px-6 text-center">
+        <div className="relative z-10 w-full flex flex-col items-center py-4 px-6 text-center justify-evenly gap-4">
           {/* 🔝 TITLE */}
-          <h1 className="font-cinzelDecorative text-xl md:text-3xl xl:text-5xl font-semibold text-white uppercase why-text my-2 md:my-4">
+          <h1 className="font-cinzelDecorative text-xl md:text-3xl xl:text-5xl font-semibold text-white uppercase why-text mb-2 md:my-4">
             OFFERS & PROMOTIONS
           </h1>
 
