@@ -60,7 +60,7 @@ function App() {
       </div>
 
       {/* About Us */}
-      <div className="relative h-[80vh] md:h-screen flex flex-col items-center justify-center overflow-hidden">
+      <div className="relative h-[80vh] xl:h-screen flex flex-col items-center justify-center overflow-hidden">
         {/* 🖼️ Background */}
         <div className="absolute inset-0 bg-[url('/images/about.webp')] bg-cover bg-center"></div>
 
@@ -93,7 +93,7 @@ function App() {
       </div>
 
       {/* Why Us */}
-      <div className="relative h-[80vh] md:h-screen flex flex-col items-center justify-center overflow-hidden">
+      <div className="relative h-[80vh] xl:h-screen flex flex-col items-center justify-center overflow-hidden">
         {/* 🖼️ Background */}
         <div className="absolute inset-0 bg-[url('/images/why.png')] bg-contain bg-center"></div>
 
