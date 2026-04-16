@@ -60,7 +60,7 @@ function App() {
       </div>
 
       {/* About Us */}
-      <div className="relative h-screen flex flex-col items-center justify-center overflow-hidden">
+      <div className="relative h-[80vh] md:h-screen flex flex-col items-center justify-center overflow-hidden">
         {/* 🖼️ Background */}
         <div className="absolute inset-0 bg-[url('/images/about.webp')] bg-cover bg-center"></div>
 
@@ -93,7 +93,7 @@ function App() {
       </div>
 
       {/* Why Us */}
-      <div className="relative h-screen flex flex-col items-center justify-center overflow-hidden">
+      <div className="relative h-[80vh] md:h-screen flex flex-col items-center justify-center overflow-hidden">
         {/* 🖼️ Background */}
         <div className="absolute inset-0 bg-[url('/images/why.png')] bg-contain bg-center"></div>
 
@@ -113,7 +113,7 @@ function App() {
           </h2>
 
           {/* 🔻 BOTTOM */}
-          <h3 className="font-times text-xl md:text-2xl xl:text-4xl font-semibold text-white uppercase why-text tracking-wide leading-relaxed max-w-6xl mx-auto text-center">
+          <h3 className="font-times text-lg md:text-2xl xl:text-4xl font-semibold text-white uppercase why-text leading-relaxed max-w-6xl mx-auto text-center tracking-widest">
             enjoy professional service from our highly <br /> qualified team.
             <br />
             Get high chances of winning, daily exciting
@@ -128,7 +128,7 @@ function App() {
       {/* Offers & Promotions */}
       <div className="relative min-h-screen flex flex-col items-center justify-center">
         {/* 🖼️ Background */}
-        <div className="absolute inset-0 bg-[url('/images/why.png')] bg-contain bg-center"></div>
+        <div className="absolute inset-0 bg-[url('/images/offers.png')] bg-contain bg-center"></div>
 
         {/* 🧠 Content */}
         <div className="relative z-10 w-full flex flex-col items-center py-2 px-6 text-center">
