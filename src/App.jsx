@@ -133,7 +133,7 @@ function App() {
         {/* 🧠 Content */}
         <div className="relative z-10 w-full flex flex-col items-center py-2 px-6 text-center">
           {/* 🔝 TITLE */}
-          <h1 className="font-cinzelDecorative text-xl md:text-3xl xl:text-5xl font-semibold text-white uppercase why-text">
+          <h1 className="font-cinzelDecorative text-xl md:text-3xl xl:text-5xl font-semibold text-white uppercase why-text my-4">
             OFFERS & PROMOTIONS
           </h1>
 
