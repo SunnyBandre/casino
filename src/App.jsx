@@ -26,6 +26,7 @@ function App() {
 
   return (
     <div>
+      {/* Home */}
       <div className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* 🎬 Background Video */}
         <video
@@ -58,12 +59,13 @@ function App() {
         </div>
       </div>
 
+      {/* About Us */}
       <div className="relative h-screen flex flex-col items-center justify-center overflow-hidden">
         {/* 🖼️ Background */}
         <div className="absolute inset-0 bg-[url('/images/about.webp')] bg-cover bg-center"></div>
 
         {/* 🔲 Overlay (UNCHANGED as you wanted) */}
-        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="absolute inset-0 bg-black/70"></div>
 
         {/* 🧠 Content */}
         <div className="relative z-10 h-full w-full flex flex-col items-center justify-between py-16 px-4 text-center">
@@ -90,6 +92,7 @@ function App() {
         </div>
       </div>
 
+      {/* Why Us */}
       <div className="relative h-screen flex flex-col items-center justify-center overflow-hidden">
         {/* 🖼️ Background */}
         <div className="absolute inset-0 bg-[url('/images/why.png')] bg-contain bg-center"></div>
@@ -100,27 +103,29 @@ function App() {
         {/* 🧠 Content */}
         <div className="relative z-10 h-full w-full flex flex-col items-center justify-between py-16 px-4 text-center">
           {/* 🔝 TOP */}
-          <h1 className="font-cinzelDecorative text-xl md:text-3xl xl:text-5xl font-semibold text-white uppercase why-text">
+          <h1 className="font-cinzelDecorative text-xl md:text-3xl xl:text-6xl font-semibold text-white uppercase why-text">
             WHY US!
           </h1>
 
           {/* 🟰 CENTER */}
-          <h2 className="font-cinzel text-lg md:text-2xl xl:text-4xl text-[#f3cc44] font-semibold uppercase why-text">
+          <h2 className="font-cinzel text-xl md:text-3xl xl:text-5xl text-[#f3cc44] font-bold uppercase why-text">
             At Mega Winners Club,
           </h2>
 
           {/* 🔻 BOTTOM */}
-          <h3 className="font-times text-xl md:text-2xl xl:text-4xl font-semibold text-white uppercase why-text">
+          <h3 className="font-times text-xl md:text-2xl xl:text-4xl font-semibold text-white uppercase why-text tracking-wide leading-relaxed max-w-6xl mx-auto text-center">
             enjoy professional service from our highly <br /> qualified team.
             <br />
             Get high chances of winning, daily exciting
-            <br /> bonuses, instant loading, and quick cashouts.
+            <br /> bonuses, instant loading,
+            <br /> and quick cashouts.
             <br /> Available 24/7, play anytime, anywhere where
             <br /> winning never stops.
           </h3>
         </div>
       </div>
 
+      {/* Offers & Promotions */}
       <div className="relative min-h-screen flex flex-col items-center justify-center">
         {/* 🖼️ Background */}
         <div className="absolute inset-0 bg-[url('/images/why.png')] bg-contain bg-center"></div>
@@ -174,6 +179,7 @@ function App() {
         </div>
       </div>
 
+      {/* Whatsapp */}
       <a
         href="https://wa.me/qr/IYZ34O72U6XFJ1"
         target="_blank"
