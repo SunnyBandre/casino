@@ -207,7 +207,7 @@ function App() {
       {/* Why Us */}
       <div className="relative h-[80vh] xl:h-screen flex flex-col items-center justify-center overflow-hidden">
         {/* 🖼️ Background */}
-        <div className="absolute inset-0 bg-[url('/images/why.png')] bg-contain bg-center"></div>
+        <div className="absolute inset-0 bg-[url('/images/why.png')] bg-cover bg-no-repeat bg-center"></div>
 
         {/* 🔲 Overlay (UNCHANGED as you wanted) */}
         {/* <div className="absolute inset-0 bg-black/50"></div> */}
