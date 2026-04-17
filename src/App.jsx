@@ -218,7 +218,8 @@ function App() {
 
           {/* 🟰 CENTER */}
           <h2 className="font-cinzel text-2xl md:text-4xl xl:text-5xl text-[#f3cc44] font-bold uppercase why-text">
-            At Mega Winners Club,
+            At <br />
+            Mega Winners Club
           </h2>
 
           {/* 🔻 BOTTOM */}
@@ -288,7 +289,7 @@ function App() {
         </div>
       </div>
 
-      {/* Games We Provide */}
+      {/* Explore Our Games */}
       <div className="relative min-h-screen flex flex-col items-center justify-center">
         {/* 🖼️ Background */}
         <div className="absolute inset-0 bg-[url('/images/offers.png')] bg-contain bg-center"></div>
@@ -297,7 +298,7 @@ function App() {
         <div className="relative z-10 h-full w-full flex flex-col items-center justify-start gap-10 py-16 px-4 text-center">
           {/* 🔝 TOP */}
           <h1 className="font-cinzelDecorative text-xl md:text-3xl xl:text-5xl font-semibold text-white uppercase why-text">
-            Games We Provide
+            Explore Our Games
           </h1>
 
           {gameChunks.map((group, i) => (
@@ -318,7 +319,7 @@ function App() {
         </div>
       </div>
 
-      {/* Contact Us */}
+      {/* REACH US ANYTIME */}
       <div
         ref={contactRef}
         className="relative h-[80vh] xl:h-screen flex flex-col items-center justify-center overflow-hidden"
@@ -333,7 +334,7 @@ function App() {
         <div className="relative z-10 h-full w-full flex flex-col items-center justify-between py-16 px-4 text-center">
           {/* 🔝 TOP */}
           <h1 className="font-cinzelDecorative text-xl md:text-3xl xl:text-5xl font-semibold text-white uppercase">
-            CONTACT US!
+            REACH US ANYTIME
           </h1>
 
           <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
@@ -374,7 +375,7 @@ function App() {
 
           {/* 🔻 BOTTOM */}
           <h3 className="font-times text-lg md:text-xl xl:text-3xl font-semibold text-white uppercase line-height-relaxed">
-            CLICK THE ICON TO <br /> CONNECT WITH US!!!
+            MESSAGE US <br /> IN ONE CLICK
           </h3>
         </div>
       </div>
