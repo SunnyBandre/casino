@@ -205,12 +205,9 @@ function App() {
       </div>
 
       {/* Why Us */}
-      <div className="relative h-[80vh] xl:h-screen flex flex-col items-center justify-center overflow-hidden">
+      <div className="relative h-[70vh] md:h-[80vh] xl:h-screen flex flex-col items-center justify-center overflow-hidden">
         {/* 🖼️ Background */}
         <div className="absolute inset-0 bg-[url('/images/why.png')] bg-cover bg-no-repeat bg-center"></div>
-
-        {/* 🔲 Overlay (UNCHANGED as you wanted) */}
-        {/* <div className="absolute inset-0 bg-black/50"></div> */}
 
         {/* 🧠 Content */}
         <div className="relative z-10 h-full w-full flex flex-col items-center justify-between py-16 px-4 text-center">
@@ -341,28 +338,38 @@ function App() {
 
           <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
             {/* WhatsApp */}
-            <div className="flex flex-col items-center">
+            <a
+              href="https://wa.me/qr/IYZ34O72U6XFJ1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col items-center group"
+            >
               <img
                 src="/images/whatsapp.png"
                 alt="whatsapp logo"
-                className="w-24 h-24 md:w-40 md:h-40 xl:w-72 xl:h-72"
+                className="w-24 h-24 md:w-40 md:h-40 xl:w-72 xl:h-72 transition duration-300 group-hover:scale-105"
               />
-              <p className="mt-2 text-white font-cinzel font-extrabold text-sm md:text-lg xl:text-2xl">
+              <p className="mt-2 text-white font-cinzel font-extrabold text-sm md:text-lg xl:text-2xl transition duration-300 group-hover:scale-105">
                 WHATSAPP
               </p>
-            </div>
+            </a>
 
             {/* Telegram */}
-            <div className="flex flex-col items-center">
+            <a
+              href="http://t.me/Officialmegawinnerscluab"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col items-center group"
+            >
               <img
                 src="/images/telegram.png"
                 alt="telegram logo"
-                className="w-24 h-24 md:w-40 md:h-40 xl:w-72 xl:h-72"
+                className="w-24 h-24 md:w-40 md:h-40 xl:w-72 xl:h-72 transition duration-300 group-hover:scale-105"
               />
-              <p className="mt-2 text-white font-cinzel font-extrabold text-sm md:text-lg xl:text-2xl">
+              <p className="mt-2 text-white font-cinzel font-extrabold text-sm md:text-lg xl:text-2xl transition duration-300 group-hover:scale-105">
                 TELEGRAM
               </p>
-            </div>
+            </a>
           </div>
 
           {/* 🔻 BOTTOM */}
