@@ -161,8 +161,8 @@ function App() {
             className="luxury-text font-cinzelDecorative text-3xl md:text-5xl xl:text-7xl font-semibold text-white text-center uppercase"
           >
             MEGA
-            <br /> WINNERS CLUB
-            <br /> OFFICIAL
+            <br /> WINNERS <br /> CLUB
+            {/* <br /> OFFICIAL */}
           </h1>
 
           <p className="font-cinzelDecorative text-base md:text-xl lg:text-2xl text-white font-semibold text-center uppercase mt-2">
