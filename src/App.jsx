@@ -99,6 +99,7 @@ const games = [
 function App() {
   const contactRef = useRef(null);
   const [showWhatsapp, setShowWhatsapp] = useState(true);
+  const [activeIndex, setActiveIndex] = useState(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -306,7 +307,13 @@ function App() {
               {/* 🎴 CARDS */}
               <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 xl:gap-10 w-full max-w-7xl place-items-center">
                 {group.map((game, idx) => (
-                  <GameCard key={idx} {...game} />
+                  <GameCard
+                    key={idx}
+                    {...game}
+                    index={idx}
+                    activeIndex={activeIndex}
+                    setActiveIndex={setActiveIndex}
+                  />
                 ))}
               </div>
 
