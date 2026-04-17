@@ -212,12 +212,12 @@ function App() {
         {/* 🧠 Content */}
         <div className="relative z-10 h-full w-full flex flex-col items-center justify-between py-16 px-4 text-center">
           {/* 🔝 TOP */}
-          <h1 className="font-cinzelDecorative text-2xl md:text-4xl xl:text-7xl font-semibold text-white uppercase why-text">
+          <h1 className="font-cinzelDecorative text-2xl md:text-4xl xl:text-6xl font-semibold text-white uppercase why-text">
             WHY US!
           </h1>
 
           {/* 🟰 CENTER */}
-          <h2 className="font-cinzel text-2xl md:text-4xl xl:text-6xl text-[#f3cc44] font-bold uppercase why-text">
+          <h2 className="font-cinzel text-2xl md:text-4xl xl:text-5xl text-[#f3cc44] font-bold uppercase why-text">
             At Mega Winners Club,
           </h2>
 
@@ -345,7 +345,7 @@ function App() {
               className="flex flex-col items-center group"
             >
               <img
-                src="/images/whatsapp.png"
+                src="/images/whatsapp-logo.png"
                 alt="whatsapp logo"
                 className="w-24 h-24 md:w-40 md:h-40 xl:w-72 xl:h-72 transition duration-300 group-hover:scale-105"
               />
@@ -390,7 +390,7 @@ function App() {
           {/* 🟢 Icon */}
           <div className="p-1 rounded-full shadow-lg transition-all duration-300 group-hover:scale-110">
             <img
-              src="/images/whatsapp-logo.png"
+              src="/images/whatsapp.png"
               alt="WhatsApp"
               className="w-12 h-12"
             />
