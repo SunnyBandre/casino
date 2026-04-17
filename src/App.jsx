@@ -155,7 +155,7 @@ function App() {
         <div className="absolute inset-0 bg-black/40"></div>
 
         {/* 🧠 Content        md=Tablet(768px) xl=Desktop(1280px)  */}
-        <div className="relative z-10 flex flex-col items-center justify-center">
+        <div className="relative z-10 flex flex-col items-center justify-center gap-6">
           <h1
             data-text="MEGA WINNERS CLUB OFFICIAL"
             className="luxury-text font-cinzelDecorative text-3xl md:text-5xl xl:text-7xl font-semibold text-white text-center uppercase"
