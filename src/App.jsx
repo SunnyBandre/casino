@@ -158,7 +158,7 @@ function App() {
         <div className="relative z-10 flex flex-col items-center justify-center gap-6">
           <h1
             data-text="MEGA WINNERS CLUB OFFICIAL"
-            className="luxury-text font-cinzelDecorative text-3xl md:text-5xl xl:text-7xl font-semibold text-white text-center uppercase"
+            className="luxury-text font-cinzelDecorative text-5xl md:text-6xl xl:text-7xl font-semibold text-white text-center uppercase"
           >
             MEGA
             <br /> WINNERS <br /> CLUB
@@ -212,12 +212,12 @@ function App() {
         {/* 🧠 Content */}
         <div className="relative z-10 h-full w-full flex flex-col items-center justify-between py-16 px-4 text-center">
           {/* 🔝 TOP */}
-          <h1 className="font-cinzelDecorative text-xl md:text-3xl xl:text-6xl font-semibold text-white uppercase why-text">
+          <h1 className="font-cinzelDecorative text-2xl md:text-4xl xl:text-7xl font-semibold text-white uppercase why-text">
             WHY US!
           </h1>
 
           {/* 🟰 CENTER */}
-          <h2 className="font-cinzel text-xl md:text-3xl xl:text-5xl text-[#f3cc44] font-bold uppercase why-text">
+          <h2 className="font-cinzel text-2xl md:text-4xl xl:text-6xl text-[#f3cc44] font-bold uppercase why-text">
             At Mega Winners Club,
           </h2>
 
