@@ -1,5 +1,7 @@
 import "./App.css";
+import GameCard from "./GameCard";
 import Sticker from "./Sticker";
+import { useEffect, useState, useRef } from "react";
 
 const offers = [
   { line1: "100% SIGN-UP", line2: "BONUS" },
@@ -15,7 +17,107 @@ const offers = [
   { line1: "$20 SEASONAL", line2: "BOOSTS" },
 ];
 
+const games = [
+  {
+    title: "PANDA MASTER",
+    image: "/images/PANDA MASTER.png",
+    link: "https://pandamaster.vip:8888",
+  },
+  {
+    title: "FIREKIRIN",
+    image: "/images/FIREKIRIN.png",
+    link: " http://start.firekirin.xyz:8580",
+  },
+  { title: "JUWA", image: "/images/JUWA.png", link: "https://dl.juwa777.com" },
+  {
+    title: "VEGAS X",
+    image: "/images/VEGAS X.png",
+    link: "https://vegas-x.org",
+  },
+  {
+    title: "ULTRA PANDA",
+    image: "/images/ULTRA PANDA.png",
+    link: "https://www.ultrapanda.club",
+  },
+  {
+    title: "VEGAS SWEEPS",
+    image: "/images/VEGAS SWEEPS.png",
+    link: "https://m.lasvegassweeps.com",
+  },
+  {
+    title: "CASH FRENZY",
+    image: "/images/CASH FRENZY.png",
+    link: "https://www.cashfrenzy777.com",
+  },
+  {
+    title: "VBLINK",
+    image: "/images/VBLINK.png",
+    link: "https://www.vblink777.club",
+  },
+  {
+    title: "ORION STARS",
+    image: "/images/ORION STARS.png",
+    link: "https://www.orionstars777.club",
+  },
+  {
+    title: "GAME ROOM",
+    image: "/images/GAME ROOM.png",
+    link: "https://www.gameroom777.club",
+  },
+  {
+    title: "GAME VAULT",
+    image: "/images/GAME VAULT.png",
+    link: "https://download.gamevault999.com",
+  },
+  {
+    title: "MILKYWAY",
+    image: "/images/MILKYWAY.png",
+    link: "https://milkywayapp.xyz",
+  },
+  {
+    title: "MEGA SPIN",
+    image: "/images/MEGA SPIN.png",
+    link: "https://www.megaspinsweeps.com",
+  },
+  {
+    title: "JUWA 2.0",
+    image: "/images/JUWA.png",
+    link: "https://m.juwa2.com",
+  },
+  {
+    title: "MOOLAH",
+    image: "/images/MOOLAH.png",
+    link: "https://moolah.vip:8888",
+  },
+  {
+    title: "VEGAS ROLL",
+    image: "/images/VEGAS ROLL.png",
+    link: "https://www.vegas-roll.com/m",
+  },
+];
+
 function App() {
+  const contactRef = useRef(null);
+  const [showWhatsapp, setShowWhatsapp] = useState(true);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        // ❌ hide when contact section is visible
+        setShowWhatsapp(!entry.isIntersecting);
+      },
+      { threshold: 0.3 }, // adjust sensitivity
+    );
+
+    if (contactRef.current) {
+      observer.observe(contactRef.current);
+    }
+
+    return () => {
+      if (contactRef.current) observer.unobserve(contactRef.current);
+    };
+  }, []);
+
   const chunk = (arr, size) => {
     const res = [];
     for (let i = 0; i < arr.length; i += size) {
@@ -23,6 +125,16 @@ function App() {
     }
     return res;
   };
+
+  const chunk2 = (arr, size) => {
+    const res = [];
+    for (let i = 0; i < arr.length; i += size) {
+      res.push(arr.slice(i, i + size));
+    }
+    return res;
+  };
+
+  const gameChunks = chunk2(games, 4);
 
   return (
     <div>
@@ -179,27 +291,110 @@ function App() {
         </div>
       </div>
 
-      {/* Whatsapp */}
-      <a
-        href="https://wa.me/qr/IYZ34O72U6XFJ1"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-5 right-5 z-50 flex flex-col items-center group"
-      >
-        {/* 🟢 Icon */}
-        <div className="p-1 rounded-full shadow-lg transition-all duration-300 group-hover:scale-110">
-          <img
-            src="/images/whatsapp-logo.png"
-            alt="WhatsApp"
-            className="w-12 h-12"
-          />
-        </div>
+      {/* Games We Provide */}
+      <div className="relative min-h-screen flex flex-col items-center justify-center">
+        {/* 🖼️ Background */}
+        <div className="absolute inset-0 bg-[url('/images/offers.png')] bg-contain bg-center"></div>
 
-        {/* 🟢 Text */}
-        <span className="text-white hidden md:block text-xs xl:text-sm font-bold font-cinzel tracking-wide uppercase drop-shadow-md transition-all duration-300 group-hover:translate-y-1">
-          For more query
-        </span>
-      </a>
+        {/* 🧠 Content */}
+        <div className="relative z-10 h-full w-full flex flex-col items-center justify-start gap-10 py-16 px-4 text-center">
+          {/* 🔝 TOP */}
+          <h1 className="font-cinzelDecorative text-xl md:text-3xl xl:text-5xl font-semibold text-white uppercase why-text">
+            Games We Provide
+          </h1>
+
+          {gameChunks.map((group, i) => (
+            <div key={i} className="flex flex-col items-center w-full">
+              {/* 🎴 CARDS */}
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 xl:gap-10 w-full max-w-7xl place-items-center">
+                {group.map((game, idx) => (
+                  <GameCard key={idx} {...game} />
+                ))}
+              </div>
+
+              {/* 🔻 TEXT (after each group) */}
+              <p className="font-canva text-lg md:text-xl xl:text-3xl text-white font-bold uppercase mt-6 tracking-wide">
+                Click the icon to download the game...
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Contact Us */}
+      <div
+        ref={contactRef}
+        className="relative h-[80vh] xl:h-screen flex flex-col items-center justify-center overflow-hidden"
+      >
+        {/* 🖼️ Background */}
+        <div className="absolute inset-0 bg-[url('/images/about.webp')] bg-cover bg-center"></div>
+
+        {/* 🔲 Overlay (UNCHANGED as you wanted) */}
+        <div className="absolute inset-0 bg-black/70"></div>
+
+        {/* 🧠 Content */}
+        <div className="relative z-10 h-full w-full flex flex-col items-center justify-between py-16 px-4 text-center">
+          {/* 🔝 TOP */}
+          <h1 className="font-cinzelDecorative text-xl md:text-3xl xl:text-5xl font-semibold text-white uppercase">
+            CONTACT US!
+          </h1>
+
+          <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
+            {/* WhatsApp */}
+            <div className="flex flex-col items-center">
+              <img
+                src="/images/whatsapp.png"
+                alt="whatsapp logo"
+                className="w-24 h-24 md:w-40 md:h-40 xl:w-72 xl:h-72"
+              />
+              <p className="mt-2 text-white font-cinzel font-extrabold text-sm md:text-lg xl:text-2xl">
+                WHATSAPP
+              </p>
+            </div>
+
+            {/* Telegram */}
+            <div className="flex flex-col items-center">
+              <img
+                src="/images/telegram.png"
+                alt="telegram logo"
+                className="w-24 h-24 md:w-40 md:h-40 xl:w-72 xl:h-72"
+              />
+              <p className="mt-2 text-white font-cinzel font-extrabold text-sm md:text-lg xl:text-2xl">
+                TELEGRAM
+              </p>
+            </div>
+          </div>
+
+          {/* 🔻 BOTTOM */}
+          <h3 className="font-times text-lg md:text-xl xl:text-3xl font-semibold text-white uppercase line-height-relaxed">
+            CLICK THE ICON TO <br /> CONNECT WITH US!!!
+          </h3>
+        </div>
+      </div>
+
+      {/* Whatsapp */}
+      {showWhatsapp && (
+        <a
+          href="https://wa.me/qr/IYZ34O72U6XFJ1"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="fixed bottom-5 right-5 z-50 flex flex-col items-center group"
+        >
+          {/* 🟢 Icon */}
+          <div className="p-1 rounded-full shadow-lg transition-all duration-300 group-hover:scale-110">
+            <img
+              src="/images/whatsapp-logo.png"
+              alt="WhatsApp"
+              className="w-12 h-12"
+            />
+          </div>
+
+          {/* 🟢 Text */}
+          <span className="text-white hidden md:block text-xs xl:text-sm font-bold font-cinzel tracking-wide uppercase drop-shadow-md transition-all duration-300 group-hover:translate-y-1">
+            For more query
+          </span>
+        </a>
+      )}
     </div>
   );
 }

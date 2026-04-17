@@ -6,6 +6,7 @@ export default {
         cinzel: ["Cinzel", "serif"],
         cinzelDecorative: ["Cinzel Decorative", "serif"],
         times: ["Times New Roman", "serif"],
+        canva: ["Plus Jakarta Sans", "sans-serif"],
       },
     },
   },
